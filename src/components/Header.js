@@ -25,11 +25,13 @@ const Container = styled.header `
     background-image: url(${bg});
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     font-family: 'Public Sans', sans-serif;
-    color: #FFF500;
+    color: #363530;
 
     @media (max-width: 480px){
         background-image: url(${bgMobile});
+        color: #fff;
     }
 
 `;
@@ -40,6 +42,10 @@ const TopBox = styled.div `
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top:0;
+    background: rgba(255,255,255, .5);
+    z-index: 10;
 
     @media (max-width: 768px) {
         justify-content: center;
@@ -49,8 +55,8 @@ const TopBox = styled.div `
 
 const LeftText = styled.h3 `
     font-weight: 700;
-    font-size: 1.1rem;
-    width: 50%;
+    font-size: .875rem;
+    width: 40%;
     
     @media (max-width: 768px) {
         width: 100%;
@@ -61,7 +67,7 @@ const LeftText = styled.h3 `
 
 const Menu = styled.ul `
     display: flex;
-    width: 45%;
+    width: 35%;
     min-width: 500px;
     justify-content: space-between;
     align-items: center;
@@ -74,18 +80,25 @@ const Menu = styled.ul `
 
 const MenuItems = styled.li `
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1rem;
     cursor: pointer;
+
+    :hover{
+        border-bottom: #f2e983 2px solid;
+        color:#000;
+    }
 `;
 
 const MiddleBox = styled.div `
-    width: 100%;
-    height: 400px;
+    position: absolute;
+    left: 10%;
+    top: 35%;
+   
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+   
 
     @media (max-width: 768px){
         height: 75vh;
@@ -93,59 +106,27 @@ const MiddleBox = styled.div `
     
 `;
 
-const TitleContainer = styled.div `
-    position: relative;
-    overflow: hidden;
-    height: 45%;
-    width: 100%;
-`;
-
-const SubTitleContainer = styled.div `
-    position: relative;
-    overflow: hidden;
-    height: 30%;
-    width: 100%;
-`
-
 const Title = styled.h1 `
     font-family: 'Led Bus';
-    font-size: 8.75rem;
+    font-size: 2.75rem;
     text-align: center;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 150%;
-    transform: translate(-50%);
-    animation-name: ${titleAnimation} ;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    text-shadow: #f2e983 2px 2px 2px;
 
     @media (max-width: 768px){
-        font-size: 4.5rem;
-        width: 230%;
-        animation-name: ${titleAnimationCel};
+        font-size: 2.5rem;
+
     }
 `;
 
 const SubTitle = styled.h2 `
     font-family: 'Led Bus';
-    font-size: 8.76rem;
+    font-size: 2rem;
     text-align: center;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 150%;
-    transform: translate(-50%, -50%);
-    animation-name: ${titleAnimation} ;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    text-shadow: #f2e983 2px 2px 2px;
+
 
     @media (max-width: 768px){
-        font-size: 4.5rem;
-        width: 230%;
-        animation-name: ${titleAnimationCel};
+        font-size: 1.5rem;
     }
 `
 
@@ -181,19 +162,16 @@ const Header = () => {
             <TopBox>
                 <LeftText>O Departamento Cultural da Pró-Reitoria de Extensão e Cultura da Universidade do Estado do Rio de Janeiro apresenta o festival</LeftText>
                 <Menu>
-                    <MenuItems>SOBRE</MenuItems>
-                    <MenuItems>ARTISTAS</MenuItems>
-                    <MenuItems>CURADORIA</MenuItems>
-                    <MenuItems>PROGRAMAÇÃO</MenuItems>
+                    <MenuItems>sobre</MenuItems>
+                    <MenuItems>artistas</MenuItems>
+                    <MenuItems>curadoria</MenuItems>
+                    <MenuItems>programação</MenuItems>
                 </Menu>
             </TopBox>
             <MiddleBox>
-                <TitleContainer>
                     <Title>PARADA FOTOGRÁFICA</Title>
-                </TitleContainer>
-                <SubTitleContainer>
                     <SubTitle>CARTOGRAFIAS INSURGENTES</SubTitle>
-                </SubTitleContainer>
+               
             </MiddleBox>
             <BottomBox>
                 <ArrowOne src={frontArrow} />
