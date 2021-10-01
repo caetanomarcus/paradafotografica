@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, {keyframes} from 'styled-components';
+import styled from 'styled-components';
 import bg from '../assets/images/bg.jpg'
 import bgMobile from '../assets/images/bgMobile.jpg';
 import frontArrow from '../assets/images/anterior.png';
@@ -7,16 +7,6 @@ import backArrow from '../assets/images/anterior2.png'
 
 // Animations 
 
-const titleAnimation = keyframes`
-    0% { transform: translate(50%, -50%); }
-  100% { transform: translate(-150%, -50%); }
-
-  
-`
-const titleAnimationCel = keyframes `
-    0% {left: 100%}
-  100% {left: 0}
-`
 // const isMobile = window.innerWidth <= 480;
 
 // Styles
