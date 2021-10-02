@@ -1,13 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
+import * as Scroll from 'react-scroll';
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
+// Images
 import bg from '../assets/images/bg.jpg'
 import bgMobile from '../assets/images/bgMobile.jpg';
 import frontArrow from '../assets/images/anterior.png';
 import backArrow from '../assets/images/anterior2.png'
 
-// Animations 
-
-// const isMobile = window.innerWidth <= 480;
 
 // Styles
 const Container = styled.header `
@@ -18,6 +19,8 @@ const Container = styled.header `
     background-attachment: fixed;
     font-family: 'Public Sans', sans-serif;
     color: #363530;
+    scroll-behavior: smooth; 
+    position: relative;
 
     @media (max-width: 480px){
         background-image: url(${bgMobile});
@@ -28,6 +31,7 @@ const Container = styled.header `
 
 const TopBox = styled.div `
     width: 100%;
+    height: 90px;
     padding: 32px;
     display: flex;
     justify-content: space-between;
@@ -57,11 +61,12 @@ const LeftText = styled.h3 `
 
 const Menu = styled.ul `
     display: flex;
-    width: 35%;
+    width: 31%;
     min-width: 500px;
     justify-content: space-between;
     align-items: center;
     list-style: none;
+
 
     @media (max-width: 768px){
         display: none;
@@ -72,12 +77,13 @@ const MenuItems = styled.li `
     font-weight: 700;
     font-size: 1rem;
     cursor: pointer;
+    font-style: italic;
 
     :hover{
-        border-bottom: #f2e983 2px solid;
-        color:#000;
+        
     }
 `;
+
 
 const MiddleBox = styled.div `
     position: absolute;
@@ -145,15 +151,44 @@ const ArrowTwo = styled.img `
 `
 
 const Header = () => {
+    const [isActive, setActive] = useState(null)
 
+   const handleOnSetActive = () => {
+        console.log('oi')
+   }
     
     return (
         <Container>
             <TopBox>
                 <LeftText>O Departamento Cultural da Pró-Reitoria de Extensão e Cultura da Universidade do Estado do Rio de Janeiro apresenta o festival</LeftText>
                 <Menu>
-                    <MenuItems>sobre</MenuItems>
-                    <MenuItems>artistas</MenuItems>
+                    <MenuItems>
+                    <Link
+                    activeClass="active" 
+                    to="sobre" 
+                    spy={true} 
+                    smooth={true} 
+                    offset={50} 
+                    onSetActive={handleOnSetActive}
+                    isDynamic ={true}
+                    duration={500}>
+                    sobre
+                    </Link>
+                    </MenuItems>
+
+                    <MenuItems>
+                    <Link
+                    activeClass="active" 
+                    to="artists" 
+                    spy={true} 
+                    smooth={true} 
+                    offset={50} 
+                    onSetActive={handleOnSetActive}
+                    isDynamic ={true}
+                    duration={500}>
+                    artistas
+                    </Link>
+                    </MenuItems>
                     <MenuItems>curadoria</MenuItems>
                     <MenuItems>programação</MenuItems>
                 </Menu>

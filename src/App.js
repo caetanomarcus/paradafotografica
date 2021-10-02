@@ -1,7 +1,9 @@
 import {createGlobalStyle} from 'styled-components'
 import ledFont from './assets/fonts/LedsitexSt.ttf'
 import Header from './components/Header';
-import Introdution from './components/Introdution';
+import About from './components/About';
+import Artists from './components/Artists';
+import Artists2 from './components/Artists2';
 
 const GlobalStyle = createGlobalStyle `
     
@@ -18,26 +20,27 @@ const GlobalStyle = createGlobalStyle `
     }
 
     body {
-      /* width */
-::-webkit-scrollbar {
-  width: 7px;
-}
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #363530;
-  border-radius: 2px;
-}
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
+  ::-webkit-scrollbar-thumb {
+    background: #363530;
+    border-radius: 2px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  .active {
+    color:blue;
+  }
     }
   
 `
@@ -47,7 +50,9 @@ function App() {
     <>
       <GlobalStyle />
       <Header />
-      <Introdution />
+      <About />
+      {/* <Artists /> */}
+      <Artists2 />
     </>
   );
 }
