@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import {createGlobalStyle} from 'styled-components'
 import ledFont from './assets/fonts/LedsitexSt.ttf'
 import Header from './components/Header';
@@ -39,7 +40,7 @@ const GlobalStyle = createGlobalStyle `
   }
 
   .active {
-    color:blue;
+    border-bottom: 1px black solid;
   }
     }
   

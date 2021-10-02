@@ -1,7 +1,7 @@
+/* eslint-disable no-unused-vars */
 import React, {useState} from 'react';
 import styled from 'styled-components';
-import * as Scroll from 'react-scroll';
-import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Link} from 'react-scroll'
 
 // Images
 import bg from '../assets/images/bg.jpg'

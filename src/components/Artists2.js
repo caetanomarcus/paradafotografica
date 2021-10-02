@@ -39,25 +39,16 @@ const Card = styled.div `
     /* background: #1c1b1b; */
     border-radius: 2px;
     font-family: 'Led Bus';
-    transition: 1s;
+    transition: .4s;
 		cursor: pointer;
 
     :hover{
-        border: black solid 1px;
-				border-radius: 3px;
-				background: #363530;
-				transition: .7s;
+      border: solid 1px #363530;
     }
 
-		:hover div {
-			box-shadow: none;
-		}
-
-		:hover h2 {
-			font-weight: 500;
-			color: #FFF500;
-			text-shadow: -1px 0px 12px rgba(255, 253, 0, 1);
-		}
+    :hover h2 {
+      font-weight: 700;
+    }
 `
 
 const CardTitle = styled.h2 `
