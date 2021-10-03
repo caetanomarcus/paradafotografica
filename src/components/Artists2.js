@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import artists from "../data/artists";
 import ArtistModal from "./ArtistModal";
+import { animateScroll as scroll} from 'react-scroll'
 
 const Container = styled.main `
     font-family: 'Public Sans', sans-serif;
@@ -62,7 +63,8 @@ const Card = styled.div `
     }
 
     @media (max-width: 768px) {
-        width: 90%;
+        width: 30%;
+        border: none;
     }
 `
 
@@ -71,6 +73,10 @@ const CardTitle = styled.h2 `
 	font-size: 1.3rem;
 	font-weight: 400;
 	text-shadow: #f2e983 2px 2px 2px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const CardAvatarContainer = styled.div `
@@ -85,6 +91,11 @@ const CardAvatarContainer = styled.div `
 	overflow: hidden;
 	background: white;
 
+  @media (max-width: 768px) {
+    width: 75px;
+    height: 75px;
+    margin: 0;
+  }
 	
 `
 
@@ -93,6 +104,11 @@ const CardAvatar = styled.img `
 		height: ${props => props.zoon? '200px': null};
     /* margin-top: 1rem; */
 		transition: 1s;
+
+    @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+  }
 `
 
 const Artists2 = ({openModal, 
@@ -110,7 +126,7 @@ const Artists2 = ({openModal,
 
     setModal(true)
 
-    console.log(openArtist)
+    scroll.scrollMore(400)
   }
 
     return (
@@ -118,7 +134,7 @@ const Artists2 = ({openModal,
             <Title>Artistas</Title>
             <CardBox>
                {artists.map(item => (
-                    <Card onClick={ () => handleClick(item)} >
+                    <Card offset={150} onClick={ () => handleClick(item)} >
                         <CardTitle>{item.nome}</CardTitle>
                         <CardAvatarContainer>
 													<CardAvatar src={item.avatar} zoon={ item.id === 3} />

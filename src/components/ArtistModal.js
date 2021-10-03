@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
 
+
 import back from '../assets/images/back.png'
 
 
@@ -72,10 +73,18 @@ const InfoArtistBox = styled.div `
     margin-left: auto;
     padding: 1rem;
     padding-top: 4rem;
+
+    @media (max-width: 768px) {
+       flex-direction: column;
+    }
 `;
 
 const ArtistNameBox = styled.div `
     transform: rotate(-90deg);
+
+    @media (max-width: 768px) {
+        display: none;
+    }
     
 `;
 
@@ -134,6 +143,10 @@ const AvatarBox = styled.div `
 const Avatar = styled.img `
     width: 400px;
     border-radius: 3%;
+
+    @media (max-width: 768px) {
+        width: 90%;
+    }
 `;
 
 

@@ -4,10 +4,11 @@ import styled from "styled-components";
 import programation from '../data/programation';
 
 
-const Container = styled.div `
+const Container = styled.section `
     font-family: 'Led Bus';
     color: #363530;
     margin-top: 4rem;
+    padding: 180px;
     
 `
 
@@ -29,7 +30,7 @@ const ContentBox = styled.div `
 `;
 
 const Content = styled.div `
-    width: 80%;
+    width: 85%;
     height: 50px;
     display: flex;
     align-items: center;
@@ -41,7 +42,7 @@ const Content = styled.div `
 `;
 
 const HidenContent = styled.div `
-    width: 80%;
+    width: 85%;
     height: fit-content;
     display: ${props => props.clicked? 'block' : 'none'};
     align-items: center;
@@ -73,6 +74,7 @@ const EventTitleBox = styled.div `
     display: flex;
     align-items: center;
     cursor: pointer;
+    font-size: 1.1vw;
 
     :hover h2{
         color: #e6edf7;
@@ -142,7 +144,7 @@ const Programation = () => {
     }
 
     return(
-        <Container>
+        <Container name='programation' >
             <Title>Programação</Title>
             <ContentBox>
                 {programation.map(item => (

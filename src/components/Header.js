@@ -22,7 +22,7 @@ const Container = styled.header `
     scroll-behavior: smooth; 
     position: relative;
 
-    @media (max-width: 480px){
+    @media (max-width: 768px){
         background-image: url(${bgMobile});
         color: #fff;
         background-size: cover;
@@ -138,7 +138,7 @@ const BottomBox = styled.div `
    display: none;
    width: 100%;
    
-   @media (max-width: 480px) {
+   @media (max-width: 768px) {
        display: block;
    }
 `;
@@ -199,8 +199,22 @@ const Header = ({setModal}) => {
                     artistas
                     </Link>
                     </MenuItems>
+                    <MenuItems>
+                    <Link
+                    activeClass="active" 
+                    to="programation" 
+                    spy={true} 
+                    smooth={true} 
+                    offset={50} 
+                    onSetActive={handleOnSetActive}
+                    // onSetInactive={handleOnSetInactive}
+                    isDynamic ={true}
+                    duration={500}>
+                    programação
+                    </Link>
+                    </MenuItems>
                     <MenuItems>curadoria</MenuItems>
-                    <MenuItems>programação</MenuItems>
+                    
                 </Menu>
             </TopBox>
             <MiddleBox>
