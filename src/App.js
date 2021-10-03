@@ -1,13 +1,24 @@
 /* eslint-disable no-unused-vars */
-import {createGlobalStyle} from 'styled-components'
+import React, { useState, Fragment } from 'react';
+import styled, { createGlobalStyle } from 'styled-components';
+import * as Scroll from 'react-scroll';
 import ledFont from './assets/fonts/LedsitexSt.ttf'
 import Header from './components/Header';
 import About from './components/About';
 import Artists from './components/Artists';
 import Artists2 from './components/Artists2';
 import Footer from './components/Footer';
+import ArtistModal from './components/ArtistModal';
+import DisplayedPictures from './components/DisplayedPictures';
 
-const GlobalStyle = createGlobalStyle `
+
+const Container = styled.div`
+  filter: ${props => props.isBlur && 'blur(3px)'};
+  /* display: ${props => props.isBlur && 'none'}; */
+
+`
+
+const GlobalStyle = createGlobalStyle`
     
     @font-face {
         font-family: 'Led Bus';
@@ -21,7 +32,7 @@ const GlobalStyle = createGlobalStyle `
 
     }
 
-    body {
+  body {
 
 
   ::-webkit-scrollbar {
@@ -49,15 +60,54 @@ const GlobalStyle = createGlobalStyle `
 `
 
 function App() {
+  const [openModal, setModal] = useState(false);
+  const [openArtist, setOpenArtist] = useState({});
+  const [isBlur, setBlur] = useState(false);
+  const [displayedIndex, setDisplayedIndex] = useState();
+
+
   return (
-    <>
-      <GlobalStyle />
-      <Header />
-      <About />
-      {/* <Artists /> */}
-      <Artists2 />
-      <Footer />
-    </>
+    <Fragment>
+      <Container isBlur={isBlur}>
+        <GlobalStyle />
+        <Header
+          setModal={setModal}
+        />
+        <About />
+        {/* <Artists /> */}
+        {!openModal && (
+          <Artists2
+            openModal={openModal}
+            setModal={setModal}
+            openArtist={openArtist}
+            setOpenArtist={setOpenArtist}
+          />
+        )}
+        {openModal && (
+          <ArtistModal
+            openModal={openModal}
+            setModal={setModal}
+            openArtist={openArtist}
+            setOpenArtist={setOpenArtist}
+            isBlur={isBlur}
+            setBlur={setBlur}
+            displayedIndex={displayedIndex}
+            setDisplayedIndex={setDisplayedIndex}
+
+          />
+        )}
+        <Footer />
+      </Container>
+      {isBlur && (
+        <DisplayedPictures
+          openArtist={openArtist}
+          isBlur={isBlur}
+          setBlur={setBlur}
+          displayedIndex={displayedIndex}
+          setModal={setModal}
+        />
+      )}
+    </Fragment>
   );
 }
 

@@ -157,9 +157,13 @@ const ArrowTwo = styled.img `
     display: none;
 `
 
-const Header = () => {
+const Header = ({setModal}) => {
    const handleOnSetActive = () => {
         console.log('oi')
+   }
+
+   const handleOnSetInactive = () => {
+    setModal(false)
    }
     
     return (
@@ -189,6 +193,7 @@ const Header = () => {
                     smooth={true} 
                     offset={50} 
                     onSetActive={handleOnSetActive}
+                    // onSetInactive={handleOnSetInactive}
                     isDynamic ={true}
                     duration={500}>
                     artistas

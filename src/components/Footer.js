@@ -52,7 +52,6 @@ const ProjectDescription = styled.div `
 const Title = styled.h3 `
     color: #615f54;
     font-family: 'Public Sans', sans-serif;
-
     
     `
 
@@ -60,6 +59,7 @@ const Description = styled.p `
     width: 90%;
     color: #615f54;
     font-family: 'Public Sans', sans-serif;
+    font-size: .875rem;
     line-height: 1.4rem;
 
     @media (max-width: 768px) {

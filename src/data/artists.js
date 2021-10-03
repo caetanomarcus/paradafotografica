@@ -130,7 +130,21 @@ const artists = [
         presentation: 'Meu nome é Kananda Ferreira e sou moradora de uma favela chamada Complexo da Maré, localizada no Rio de Janeiro / Brasil. Tenho 24 anos, sou escritora, educadora em formação (Licenciatura em Pedagogia na UERJ - Universidade do Estado do Rio de Janeiro), mãe e fotógrafa com o auxílio do meu celular. Através da fotografia, busco uma forma de me comunicar com as pessoas, de expressar o que sinto através das imagens e principalmente criar novas narrativas de humanização, dignidade e respeito sobre o lugar em que moro.',
         audioPresentation: kanandaData.audio,
         photographies: [
-
+            kanandaData.kananda01,
+            kanandaData.kananda03,
+            kanandaData.kananda04,
+            kanandaData.kananda05,
+            kanandaData.kananda06,
+            kanandaData.kananda07,
+            kanandaData.kananda08,
+            kanandaData.kananda09,
+            kanandaData.kananda10,
+            kanandaData.kananda11,
+            kanandaData.kananda12,
+            kanandaData.kananda13,
+            kanandaData.kananda14,
+            kanandaData.kananda15,
+            kanandaData.kananda16
         ]
     },
     {

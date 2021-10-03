@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import artists from "../data/artists";
 
-const Container = styled.div `
+const Container = styled.main `
     font-family: 'Public Sans', sans-serif;
     color:#363530;
     width: 100%;
@@ -94,14 +94,20 @@ const CardAvatar = styled.img `
 		transition: 1s;
 `
 
-const Artists2 = () => {
+const Artists2 = ({openModal, setModal, openArtist, setOpenArtist}) => {
+
+  const handleClick = (item) => {
+    setOpenArtist(item)
+
+    setModal(true)
+  }
 
     return (
-        <Container id='artists' >
+        <Container name='artists' >
             <Title>Artistas</Title>
             <CardBox>
                {artists.map(item => (
-                    <Card>
+                    <Card onClick={ () => handleClick(item)} >
                         <CardTitle>{item.nome}</CardTitle>
                         <CardAvatarContainer>
 													<CardAvatar src={item.avatar} zoon={ item.id === 3} />
