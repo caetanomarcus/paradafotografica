@@ -25,6 +25,12 @@ const Container = styled.header `
     @media (max-width: 480px){
         background-image: url(${bgMobile});
         color: #fff;
+        background-size: cover;
+        background-attachment: unset;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
     }
 
 `;
@@ -44,6 +50,7 @@ const TopBox = styled.div `
     @media (max-width: 768px) {
         justify-content: center;
         padding: 12px;
+        display: none;
     }
 `;
 
@@ -97,7 +104,7 @@ const MiddleBox = styled.div `
    
 
     @media (max-width: 768px){
-        height: 75vh;
+        position: static;
     }
     
 `;
@@ -109,7 +116,7 @@ const Title = styled.h1 `
     text-shadow: #f2e983 2px 2px 2px;
 
     @media (max-width: 768px){
-        font-size: 2.5rem;
+        font-size: 1.5rem;
 
     }
 `;
@@ -122,7 +129,7 @@ const SubTitle = styled.h2 `
 
 
     @media (max-width: 768px){
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 `
 
@@ -196,10 +203,6 @@ const Header = () => {
                     <SubTitle>CARTOGRAFIAS INSURGENTES</SubTitle>
                
             </MiddleBox>
-            <BottomBox>
-                <ArrowOne src={frontArrow} />
-                <ArrowTwo src={backArrow} />
-            </BottomBox>
 
         </Container>
     )

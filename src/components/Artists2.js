@@ -12,6 +12,10 @@ const Container = styled.div `
     align-items: center;
     padding-top: 180px;
     background: white;
+
+    @media (max-width: 480px) {
+        padding: 0;
+    }
 `;
 const Title = styled.h2 `
     font-family: 'Led Bus';
@@ -19,6 +23,10 @@ const Title = styled.h2 `
     font-weight: 400;
     text-shadow: 2px 2px 2px #f2e983;
     margin-bottom: 2rem;
+
+    @media (max-width: 768px) {
+        font-size:1.5rem;
+    }
 `;
 
 const CardBox = styled.div `
@@ -50,6 +58,10 @@ const Card = styled.div `
 
     :hover h2 {
       font-weight: 700;
+    }
+
+    @media (max-width: 768px) {
+        width: 90%;
     }
 `
 

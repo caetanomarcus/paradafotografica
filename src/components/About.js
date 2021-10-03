@@ -21,6 +21,17 @@ const Container = styled.div `
         position: absolute;
         bottom: -5%;
     }
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 0;
+
+        ::after{
+            width: 0;
+            height: 0;
+        }
+    }
 `;
 
 const TitleBox = styled.div `
@@ -31,6 +42,12 @@ const TitleBox = styled.div `
     margin-right: 3rem;
     padding-right: 1rem;
     border-right: double 3px #f2e983;
+
+    @media (max-width: 480px) {
+        width: 90%;
+        border-right: none;
+        border-bottom: double 3px #f2e983;
+    }
 `
 
 const Title = styled.h2`
@@ -39,15 +56,23 @@ const Title = styled.h2`
     font-weight: 400;
     text-align: center;
     text-shadow: 2px 2px 2px #f2e983;
+
+    @media (max-width: 480px) {
+        font-size: 1.5rem;
+    }
 `
 
 const ParagraphBox = styled.div `
     width: 45%;
     font-size: 1.2rem;
     line-height: 1.7rem;
+
+    @media (max-width: 480px) {
+        width: 90%;
+    }
 `
 const Paragraph = styled.p `
-
+    font-size: 1rem;
 `
 
 
