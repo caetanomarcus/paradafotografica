@@ -99,13 +99,15 @@ const CardAvatarContainer = styled.div `
 	border-radius: 50%;
 	box-shadow: 4px 6px 15px -3px #000000;
 	overflow: hidden;
-	background: white;
 
-  @media (max-width: 768px) {
-    width: 100%;
-    height: 100px;
+
+  @media (max-width: 480px) {
+    width: 170px;
+    height: 170px;
     margin: 0;
     border-radius: 8px;
+    background-color: #141414;
+    position: relative;
     
   }
 	
@@ -118,9 +120,23 @@ const CardAvatar = styled.img `
 		transition: 1s;
 
     @media (max-width: 768px) {
-    width: 100%;
-    height: 100%;
+    width: 150px;
+    height: 100px;
+    border: solid #141414 1px;
   }
+`;
+
+const ClickBtn = styled.button `
+  border: white 1px solid;
+  border-radius: 3px;
+  outline: none;
+  position: absolute;
+  bottom: 8px;
+  background: transparent;
+  color: #dfe7f5;
+  padding: 2px;
+  font-family: 'Public Sans', sans-serif;
+  font-size: .7rem;
 `
 
 const Artists2 = ({openModal, 
@@ -150,6 +166,7 @@ const Artists2 = ({openModal,
                         <CardTitle>{item.nome}</CardTitle>
                         <CardAvatarContainer>
 													<CardAvatar src={item.avatar} zoon={ item.id === 3} />
+                          <ClickBtn>ver expo</ClickBtn>
 												</CardAvatarContainer>
                     </Card>
                ))}
