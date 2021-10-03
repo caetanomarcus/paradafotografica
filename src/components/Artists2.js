@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import artists from "../data/artists";
+import ArtistModal from "./ArtistModal";
 
 const Container = styled.main `
     font-family: 'Public Sans', sans-serif;
@@ -94,12 +95,22 @@ const CardAvatar = styled.img `
 		transition: 1s;
 `
 
-const Artists2 = ({openModal, setModal, openArtist, setOpenArtist}) => {
+const Artists2 = ({openModal, 
+  setModal, 
+  setArtist,
+  openArtist, 
+  setOpenArtist, 
+  isBlur, 
+  setBlur, 
+  displayedIndex, 
+  setDisplayedIndex}) => {
 
   const handleClick = (item) => {
     setOpenArtist(item)
 
     setModal(true)
+
+    console.log(openArtist)
   }
 
     return (
@@ -115,6 +126,18 @@ const Artists2 = ({openModal, setModal, openArtist, setOpenArtist}) => {
                     </Card>
                ))}
             </CardBox>
+            {openModal && (
+              <ArtistModal 
+              openModal={openModal}
+              setModal={setModal}
+              openArtist={openArtist}
+              setOpenArtist={setOpenArtist}
+              isBlur={isBlur}
+              setBlur={setBlur}
+              displayedIndex={displayedIndex}
+              setDisplayedIndex={setDisplayedIndex}
+            />
+            ) }
         </Container>
     )
 }

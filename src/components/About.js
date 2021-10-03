@@ -83,7 +83,7 @@ const About = () => {
                 <Title>O festival online Parada Fotográfica</Title>
             </TitleBox>
             <ParagraphBox>
-                <Paragraph><b>N</b>asce da percepção da urgência de se pensar na produção fotográfica da cidade do Rio de Janeiro, saindo do eixo centro/zona-sul, buscando expor trabalhos de fotógrafes que furem as muralhas e tramas sociais e assim possibilitando a emergência de narrativas antes invisibilizadas e silenciadas da cultura carioca. Neste mesmo empenho, o festival fomentará o acesso ao ensino de fotografia durante sua programação para a formação de novos fotografes e a criação de redes de artistas, pensadores e criadores periféricos.</Paragraph>
+                <Paragraph>nasce da percepção da urgência de se pensar na produção fotográfica da cidade do Rio de Janeiro, saindo do eixo centro/zona-sul, buscando expor trabalhos de fotógrafes que furem as muralhas e tramas sociais e assim possibilitando a emergência de narrativas antes invisibilizadas e silenciadas da cultura carioca. Neste mesmo empenho, o festival fomentará o acesso ao ensino de fotografia durante sua programação para a formação de novos fotografes e a criação de redes de artistas, pensadores e criadores periféricos.</Paragraph>
             </ParagraphBox>
         </Container>
     )

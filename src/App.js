@@ -76,15 +76,19 @@ function App() {
         />
         <About />
         {/* <Artists /> */}
-        {!openModal && (
+        {(
           <Artists2
-            openModal={openModal}
-            setModal={setModal}
-            openArtist={openArtist}
-            setOpenArtist={setOpenArtist}
+          openModal={openModal}
+          setModal={setModal}
+          openArtist={openArtist}
+          setOpenArtist={setOpenArtist}
+          isBlur={isBlur}
+          setBlur={setBlur}
+          displayedIndex={displayedIndex}
+          setDisplayedIndex={setDisplayedIndex}
           />
         )}
-        {openModal && (
+        {/* {openModal && (
           <ArtistModal
             openModal={openModal}
             setModal={setModal}
@@ -96,7 +100,7 @@ function App() {
             setDisplayedIndex={setDisplayedIndex}
 
           />
-        )}
+        )} */}
         <Programation />
         <Footer />
       </Container>

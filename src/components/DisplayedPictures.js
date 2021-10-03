@@ -41,7 +41,7 @@ const DisplayedPictures = ({openArtist, setBlur, displayedIndex, setModal}) => {
 
     const handleClick = () => {
         setBlur(false);
-        setModal(false);
+        
     }
 
     return (

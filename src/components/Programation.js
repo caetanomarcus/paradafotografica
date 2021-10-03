@@ -7,6 +7,7 @@ import programation from '../data/programation';
 const Container = styled.div `
     font-family: 'Led Bus';
     color: #363530;
+    margin-top: 4rem;
     
 `
 
@@ -101,7 +102,7 @@ const ResumeTitle = styled.h3 `
 `;
 
 const TextContent = styled.p `
-
+    line-height: 1.7rem;
 `;
 
 const BioBox = styled.div `
@@ -117,10 +118,13 @@ const BioTitle = styled.h3 `
     margin-right: 1rem;
 `;
 
-const Bio = styled.p ``;
+const Bio = styled.p `
+    line-height: 1.7rem;
+`;
 
 const Bio2 = styled.p `
     margin-top: 1rem;
+    line-height: 1.7rem;
 `;
 
 const Programation = () => {

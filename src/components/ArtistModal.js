@@ -4,11 +4,11 @@ import styled from 'styled-components';
 import back from '../assets/images/back.png'
 
 
+
 const Container = styled.div `
     font-family: 'Public Sans', sans-serif;
-    padding-top: 180px;
+    
 
-    transform: scale(.5);
 `;
 
 const TitleContainer = styled.div `
@@ -20,7 +20,7 @@ const TitleContainer = styled.div `
 const BackBtn = styled.img `
     width: 30px;
     height: 30px;
-    position: fixed;
+    position: absolute;
     right: 5%;
     top: 20%;
     cursor: pointer;
@@ -41,6 +41,7 @@ const PhotosContainer = styled.div `
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin-top: 1rem;
 
     ::after {
         content: '';
@@ -82,6 +83,13 @@ const ArtistName = styled.h3 `
     font-family: 'Led Bus';
    
 `;
+
+const PhotoAndInfoBox = styled.div `
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+`
 
 
 const DescriptionBox = styled.div `
@@ -139,6 +147,8 @@ const ArtistModal = ({openModal,
     displayedIndex, 
     setDisplayedIndex}) => {
 
+        console.log('marcus')
+
     const [artist, setArtist] = useState(openArtist);
 
     useEffect(() => {
@@ -148,6 +158,7 @@ const ArtistModal = ({openModal,
     const handleClickBack = () => {
         console.log(openModal);
         setModal(false);
+        setArtist(null)
     }
 
     const openPictures = (index) => {
@@ -161,6 +172,7 @@ const ArtistModal = ({openModal,
                 <TitleArtist>{artist.nome}</TitleArtist>
                 <BackBtn src={back} alt="back" onClick={handleClickBack} />
             </TitleContainer>
+            <PhotoAndInfoBox>
             <PhotosContainer>
                 {artist.photographies.map( (item, index )=> {
                     return (
@@ -179,6 +191,7 @@ const ArtistModal = ({openModal,
                     <Avatar src={artist.avatar} />
                 </AvatarBox>
             </InfoArtistBox>
+            </PhotoAndInfoBox>
         </Container>
     )
 }
