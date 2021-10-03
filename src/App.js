@@ -5,6 +5,7 @@ import Header from './components/Header';
 import About from './components/About';
 import Artists from './components/Artists';
 import Artists2 from './components/Artists2';
+import Footer from './components/Footer';
 
 const GlobalStyle = createGlobalStyle `
     
@@ -21,6 +22,7 @@ const GlobalStyle = createGlobalStyle `
     }
 
     body {
+
 
   ::-webkit-scrollbar {
     width: 7px;
@@ -54,6 +56,7 @@ function App() {
       <About />
       {/* <Artists /> */}
       <Artists2 />
+      <Footer />
     </>
   );
 }

@@ -11,6 +11,7 @@ const Container = styled.div `
     flex-direction: column;
     align-items: center;
     padding-top: 180px;
+    background: white;
 `;
 const Title = styled.h2 `
     font-family: 'Led Bus';
@@ -35,7 +36,7 @@ const Card = styled.div `
 		justify-content: center;
     align-items: center;
     background: white;
-		border: solid 1px #fff;
+		border: solid 1px #f0e9e9;
     /* background: #1c1b1b; */
     border-radius: 2px;
     font-family: 'Led Bus';
@@ -44,6 +45,7 @@ const Card = styled.div `
 
     :hover{
       border: solid 1px #363530;
+    
     }
 
     :hover h2 {

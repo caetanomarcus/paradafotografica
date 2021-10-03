@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, {useState} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Link} from 'react-scroll'
 
@@ -74,13 +74,13 @@ const Menu = styled.ul `
 `;
 
 const MenuItems = styled.li `
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1rem;
     cursor: pointer;
     font-style: italic;
 
     :hover{
-        
+        font-weight: 600;
     }
 `;
 
@@ -151,8 +151,6 @@ const ArrowTwo = styled.img `
 `
 
 const Header = () => {
-    const [isActive, setActive] = useState(null)
-
    const handleOnSetActive = () => {
         console.log('oi')
    }
