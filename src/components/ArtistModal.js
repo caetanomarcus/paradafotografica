@@ -6,8 +6,9 @@ import back from '../assets/images/back.png'
 
 const Container = styled.div `
     font-family: 'Public Sans', sans-serif;
-
     padding-top: 180px;
+
+    transform: scale(.5);
 `;
 
 const TitleContainer = styled.div `

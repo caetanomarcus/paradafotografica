@@ -10,6 +10,7 @@ import Artists2 from './components/Artists2';
 import Footer from './components/Footer';
 import ArtistModal from './components/ArtistModal';
 import DisplayedPictures from './components/DisplayedPictures';
+import Programation from './components/Programation';
 
 
 const Container = styled.div`
@@ -96,6 +97,7 @@ function App() {
 
           />
         )}
+        <Programation />
         <Footer />
       </Container>
       {isBlur && (
