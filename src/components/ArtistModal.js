@@ -9,6 +9,10 @@ import back from '../assets/images/back.png'
 const Container = styled.div `
     font-family: 'Public Sans', sans-serif;
     
+    @media (max-width: 480px) {
+      background: #fff;
+      margin-top: 2rem;
+    }
 
 `;
 
@@ -35,6 +39,10 @@ const TitleArtist = styled.h2 `
     text-shadow: 2px 2px 2px #f2e983;
     text-align: center;
     margin-bottom: 3rem;
+
+    @media (max-width: 480px) {
+        font-size: 2.5rem;
+    }
 `;
 
 const PhotosContainer = styled.div `
@@ -61,6 +69,7 @@ const Photos = styled.img `
     border: double 4px black;
     border-radius: 2px;
     cursor: pointer;
+
 `;
 
 const InfoArtistBox = styled.div `
@@ -74,8 +83,11 @@ const InfoArtistBox = styled.div `
     padding: 1rem;
     padding-top: 4rem;
 
-    @media (max-width: 768px) {
-       flex-direction: column;
+    @media (max-width: 480px) {
+        width: 90%;
+       flex-direction: column-reverse;
+       margin: 0 auto;
+       padding: 0;
     }
 `;
 
@@ -113,8 +125,11 @@ const DescriptionBox = styled.div `
 
     @media (max-width: 480px) {
         width: 90%;
+        margin: 0;
+        padding: 0;
         border-right: none;
         border-bottom: double 3px #f2e983;
+        margin-top: 1rem;
     }
 `;
 
@@ -126,7 +141,7 @@ const Description = styled.p `
     line-height: 1.3rem;
 
     @media (max-width: 480px) {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 `;
 
@@ -138,6 +153,9 @@ const AvatarBox = styled.div `
 
     @media (max-width: 480px) {
         width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
     }
 `
 const Avatar = styled.img `
@@ -146,6 +164,7 @@ const Avatar = styled.img `
 
     @media (max-width: 768px) {
         width: 90%;
+        margin: 0 auto;
     }
 `;
 

@@ -9,6 +9,10 @@ const Container = styled.section `
     color: #363530;
     margin-top: 4rem;
     padding: 180px;
+
+    @media (max-width: 480px) {
+        padding: 0;
+    }
     
 `
 
@@ -21,7 +25,7 @@ const Title = styled.h2 `
     text-align: center;
 
     @media (max-width: 768px) {
-        font-size:1.5rem;
+        font-size:2.5rem;
     }
 `;
 
@@ -65,6 +69,10 @@ const Date = styled.h3 `
 
 const Day = styled.p `
     color: black;
+
+    @media (max-width: 480px) {
+        font-size: .875rem;
+    }
 `;
 
 const EventTitleBox = styled.div `
@@ -78,6 +86,10 @@ const EventTitleBox = styled.div `
 
     :hover h2{
         color: #e6edf7;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 2.2vw;
     }
 `
 

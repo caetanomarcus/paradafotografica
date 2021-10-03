@@ -24,7 +24,7 @@ const Container = styled.header `
 
     @media (max-width: 768px){
         background-image: url(${bgMobile});
-        color: #fff;
+        color: #141414;
         background-size: cover;
         background-attachment: unset;
         display: flex;
@@ -50,7 +50,8 @@ const TopBox = styled.div `
     @media (max-width: 768px) {
         justify-content: center;
         padding: 12px;
-        display: none;
+        position: absolute ;
+        
     }
 `;
 
@@ -116,7 +117,7 @@ const Title = styled.h1 `
     text-shadow: #f2e983 2px 2px 2px;
 
     @media (max-width: 768px){
-        font-size: 1.5rem;
+        font-size: 2.5rem;
 
     }
 `;
@@ -129,7 +130,7 @@ const SubTitle = styled.h2 `
 
 
     @media (max-width: 768px){
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 `
 

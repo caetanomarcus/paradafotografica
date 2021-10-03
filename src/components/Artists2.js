@@ -17,6 +17,7 @@ const Container = styled.main `
 
     @media (max-width: 480px) {
         padding: 0;
+        
     }
 `;
 const Title = styled.h2 `
@@ -26,8 +27,8 @@ const Title = styled.h2 `
     text-shadow: 2px 2px 2px #f2e983;
     margin-bottom: 2rem;
 
-    @media (max-width: 768px) {
-        font-size:1.5rem;
+    @media (max-width: 480px) {
+        font-size:2.5rem;
     }
 `;
 
@@ -36,6 +37,10 @@ const CardBox = styled.div `
     justify-content: center;
     flex-wrap: wrap;
 		padding: 1rem;
+
+    @media (max-width: 480px) {
+     
+    }
 `;
 
 const Card = styled.div `
@@ -65,6 +70,11 @@ const Card = styled.div `
     @media (max-width: 768px) {
         width: 30%;
         border: none;
+      }
+      
+      @media (max-width: 480px) {
+        margin: .5rem 1rem;
+        
     }
 `
 
@@ -92,9 +102,11 @@ const CardAvatarContainer = styled.div `
 	background: white;
 
   @media (max-width: 768px) {
-    width: 75px;
-    height: 75px;
+    width: 100%;
+    height: 100px;
     margin: 0;
+    border-radius: 8px;
+    
   }
 	
 `
