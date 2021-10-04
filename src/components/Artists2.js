@@ -39,7 +39,7 @@ const CardBox = styled.div `
 		padding: 1rem;
 
     @media (max-width: 480px) {
-     
+      padding: 0;
     }
 `;
 
@@ -57,6 +57,7 @@ const Card = styled.div `
     font-family: 'Led Bus';
     transition: .4s;
 		cursor: pointer;
+    position: relative;
 
     :hover{
       border: solid 1px #363530;
@@ -70,10 +71,15 @@ const Card = styled.div `
     @media (max-width: 768px) {
         width: 30%;
         border: none;
+        padding: 0;
       }
       
       @media (max-width: 480px) {
-        margin: .5rem 1rem;
+        margin: .5rem 0;
+        height: 160px;
+        display: block;
+        border: none;
+        padding: none;
         
     }
 `
@@ -89,6 +95,38 @@ const CardTitle = styled.h2 `
   }
 `;
 
+const CardBtn = styled.button `
+  display: none;
+
+  @media (max-width: 480px) {
+    display: block;
+    width: 200px;
+    height: 45px;
+    padding: 5px;
+    background: #141414;
+    outline: none;
+    border-style: none;
+    border: #fff double 2px;
+    /* border-radius: 0 8px 8px 0; */
+    color: #fff;
+    font-size: .675rem;
+    position: absolute;
+
+    border-radius: ${props => props.index === 0 || props.index === 2 || props.index === 4 || props.index === 6? '0 8px 8px 0' : '8px 0 0 8px'};
+
+    top: ${props => props.index === 0 || props.index === 1? '0':
+    props.index === 2 || props.index === 3? '3rem': 
+    props.index === 4 || props.index === 5? '6rem': '9rem'};
+
+    right: ${props => props.index === 0 || props.index === 2 || props.index === 4 || props.index === 6? '0': '' };
+
+    left: ${props => props.index === 1 || props.index === 3 || props.index === 5 || props.index === 7? '0': '' }
+
+  }
+
+
+`
+
 const CardAvatarContainer = styled.div `
 	width: 100px;
 	height: 100px;
@@ -102,12 +140,14 @@ const CardAvatarContainer = styled.div `
 
 
   @media (max-width: 480px) {
-    width: 170px;
+    /* width: 170px;
     height: 170px;
     margin: 0;
     border-radius: 8px;
     background-color: #141414;
-    position: relative;
+    position: relative; */
+
+    display: none;
     
   }
 	
@@ -120,9 +160,10 @@ const CardAvatar = styled.img `
 		transition: 1s;
 
     @media (max-width: 480px) {
-    width: 150px;
+    /* width: 150px;
     height: 100px;
-    border: solid #141414 1px;
+    border: solid #141414 1px; */
+    display:  none;
   }
 `;
 
@@ -137,6 +178,8 @@ const ClickBtn = styled.button `
   padding: 2px;
   font-family: 'Public Sans', sans-serif;
   font-size: .7rem;
+
+  display: none;
 `
 
 const Artists2 = ({openModal, 
@@ -161,13 +204,14 @@ const Artists2 = ({openModal,
         <Container name='artists' >
             <Title>Artistas</Title>
             <CardBox>
-               {artists.map(item => (
+               {artists.map((item, index) => (
                     <Card offset={150} onClick={ () => handleClick(item)} >
                         <CardTitle>{item.nome}</CardTitle>
                         <CardAvatarContainer>
 													<CardAvatar src={item.avatar} zoon={ item.id === 3} />
-                          <ClickBtn>ver expo</ClickBtn>
+                          <ClickBtn >ver expo</ClickBtn>
 												</CardAvatarContainer>
+                        <CardBtn index={index} >{item.nome}</CardBtn>
                     </Card>
                ))}
             </CardBox>
