@@ -10,7 +10,7 @@ const Container = styled.section `
     margin-top: 4rem;
     padding: 180px;
 
-    @media (max-width: 480px) {
+    @media (max-width: 768px) {
         padding: 0;
     }
     
@@ -42,6 +42,7 @@ const Content = styled.div `
     border: solid black 1px;
     border-radius: 4px;
     margin-bottom: 1rem;
+
   
 `;
 
@@ -172,6 +173,7 @@ const Programation = () => {
                         </Content>
                         <HidenContent clicked={isClicked === item.id} >
                             <Particpants>{item.members}</Particpants>
+                            {item.video}
                             {item.texts.content !== '' && (
                                 <Fragment>
                                     <Resume>

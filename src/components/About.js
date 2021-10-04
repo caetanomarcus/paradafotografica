@@ -57,7 +57,7 @@ const TitleBox = styled.div `
 
 const Title = styled.h2`
     font-family: 'Led Bus';
-    font-size: 4.7rem;
+    font-size: 4.5vw;
     font-weight: 400;
     text-align: center;
     text-shadow: 2px 2px 2px #f2e983;
