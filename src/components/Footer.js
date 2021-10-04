@@ -1,10 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import coexpa from '../assets/images/logos/logo_coexpa.jpg'
-import decult from '../assets/images/logos/decult-pr3.png'
-import pr3 from '../assets/images/logos/PR3_Logo_uerj_branco_p.png'
-import uerj from '../assets/images/logos/logo_uerj.png'
+import barraDeLogo from '../assets/images/logos/barra_de_logos.png';
 
 const Container = styled.footer `
     width: 100%;
@@ -198,19 +195,19 @@ const Team = styled.p `
 `;
 
 const LogoBox = styled.div `
-    width: 65%;
-    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 
-    @media (max-width: 480px) {
+    /* @media (max-width: 480px) {
         width: 90%;
-    }
+    } */
 `
 
 const Logo = styled.img `
-    width: 10%;
-    margin-left: 3rem;
-    margin-right: 3rem;
-
+    width: 80%;
+    
+/* 
     @media (max-width: 1024px) {
         width: 19%;
         margin: 0 .5rem;
@@ -221,7 +218,7 @@ const Logo = styled.img `
         width: 19%;
         margin: 0 .5rem;
         
-    }
+    } */
 `
 
 
@@ -325,10 +322,7 @@ const Footer = () => {
             </MiddleBox>
             <BottomBox>
                 <LogoBox>
-                <Logo src={coexpa} alt='logo coexpa'/>
-                <Logo src={decult} alt='locao decult'/>
-                <Logo src={pr3} alt='logo pr3'/>
-                <Logo src={uerj} alt='logo uerj'/>
+                <Logo src={barraDeLogo} alt='logo coexpa'/>
                 </LogoBox>
             </BottomBox>
         </Container>
