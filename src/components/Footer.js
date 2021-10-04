@@ -26,15 +26,15 @@ const Container = styled.footer `
     }
 `;
 
-const WhiteContainer = styled.div `
-    height: 90px;
-    width: 100%;
-    background-color: #fff;
+// const WhiteContainer = styled.div `
+//     height: 90px;
+//     width: 100%;
+//     background-color: #fff;
 
-    @media (max-width: 768px) {
-        display: none;
-    }
-`;
+//     @media (max-width: 768px) {
+//         display: none;
+//     }
+// `;
 
 const Head = styled.div `
     display: flex;
