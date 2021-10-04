@@ -69,7 +69,7 @@ const LeftText = styled.h3 `
 
 const Menu = styled.ul `
     display: flex;
-    width: 31%;
+    width: 10%;
     min-width: 500px;
     justify-content: space-between;
     align-items: center;
@@ -214,8 +214,6 @@ const Header = ({setModal}) => {
                     programação
                     </Link>
                     </MenuItems>
-                    <MenuItems>curadoria</MenuItems>
-                    
                 </Menu>
             </TopBox>
             <MiddleBox>
