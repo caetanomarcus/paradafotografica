@@ -40,7 +40,9 @@ const artists = [
         photographies: [
             biraData.bira01,
             biraData.bira02,
-            biraData.bira03
+            biraData.bira03,
+            biraData.bira04,
+            biraData.bira05
         ]
     },
     {
