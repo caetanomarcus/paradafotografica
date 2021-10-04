@@ -84,7 +84,7 @@ const CardTitle = styled.h2 `
 	font-weight: 400;
 	text-shadow: #f2e983 2px 2px 2px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     display: none;
   }
 `;
@@ -119,7 +119,7 @@ const CardAvatar = styled.img `
     /* margin-top: 1rem; */
 		transition: 1s;
 
-    @media (max-width: 768px) {
+    @media (max-width: 480px) {
     width: 150px;
     height: 100px;
     border: solid #141414 1px;

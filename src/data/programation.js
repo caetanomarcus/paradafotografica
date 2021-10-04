@@ -1,3 +1,21 @@
+import styled from "styled-components";
+
+const VideoContainer = styled.div `
+    position: relative; 
+    padding-bottom: 56.25%; 
+    padding-top: 30px; 
+    height: 0; 
+    overflow: hidden; 
+`;
+
+const Iframe = styled.iframe `
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+`
+
 const programation = [
     {
         id: 0,
@@ -6,7 +24,7 @@ const programation = [
         day: 'quinta',
         title: 'Abertura: "A cidade insurgente" e Lançamento do site da Exposição',
         members: 'com Andréa Almeida, Diogo Santos e Hevelin Costa',
-        video: '',
+        video: <VideoContainer><Iframe width="853" height="480" src="https://www.youtube.com/embed/8GtfK-aiPNs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></Iframe></VideoContainer>,
         texts: {
             content: ``,
             authorBio: ``
@@ -19,7 +37,7 @@ const programation = [
         day: 'quarta',
         title: 'Museu Miim',
         members: 'com Francisco Valdean',
-        video: '',
+        video: <VideoContainer><Iframe width="853" height="480" src="https://www.youtube.com/embed/_UrjrWl0o-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></Iframe></VideoContainer>,
         texts: {
             content: ``,
             authorBio: ``
