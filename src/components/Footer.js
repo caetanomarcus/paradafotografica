@@ -68,6 +68,7 @@ const BottomBox = styled.div `
     align-self: center;
     /* width: 80%; */
     padding: 1rem;
+    background: white;
 
     @media (max-width: 480px){
         padding: 0;
