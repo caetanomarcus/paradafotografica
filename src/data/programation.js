@@ -13,7 +13,9 @@ const Iframe = styled.iframe `
     top: 0; 
     left: 0; 
     width: 100%; 
-    height: 100%; 
+    height: 100%;
+    border: solid 1px #141414;
+    border-radius: 4px;
 `
 
 const programation = [

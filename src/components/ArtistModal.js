@@ -168,6 +168,20 @@ const Avatar = styled.img `
     }
 `;
 
+const ClickBtn = styled.button `
+    background: #141414;
+    outline: none;
+    border: solid #141414 1px;
+    border-radius: 4px;
+    margin-top: 2rem;
+    padding: 1rem;
+    color: #fff;
+    display: none;
+
+    @media (max-width: 480px) {
+        display: block;
+    }
+`
 
 
 
@@ -200,17 +214,20 @@ const ArtistModal = ({openModal,
 
     return (
         <Container id='artistModal'>
+            
             <TitleContainer>
                 <TitleArtist>{artist.nome}</TitleArtist>
                 <BackBtn src={back} alt="back" onClick={handleClickBack} />
             </TitleContainer>
             <PhotoAndInfoBox>
+            
             <PhotosContainer>
                 {artist.photographies.map( (item, index )=> {
                     return (
                         <Photos src={item} onClick={() => openPictures(index)} />
                     )
                 })}
+                <ClickBtn onClick={() => setBlur(true)} > clique para ir às obras </ClickBtn>
             </PhotosContainer>
             <InfoArtistBox>
                 <ArtistNameBox>

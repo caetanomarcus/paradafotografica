@@ -84,6 +84,11 @@ const CardTitle = styled.h2 `
 	font-weight: 400;
 	text-shadow: #f2e983 2px 2px 2px;
 
+  @media (max-width: 768px) {
+    margin-right: .5rem;
+    font-size: 1.1rem;
+  }
+
   @media (max-width: 480px) {
     display: none;
   }
@@ -137,6 +142,11 @@ const ClickBtn = styled.button `
   padding: 2px;
   font-family: 'Public Sans', sans-serif;
   font-size: .7rem;
+  display: none;
+
+  @media (max-width: 480px) {
+    display: block;
+  }
 `
 
 const Artists2 = ({openModal, 

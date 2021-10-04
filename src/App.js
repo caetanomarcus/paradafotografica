@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, Fragment } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
-import * as Scroll from 'react-scroll';
 import ledFont from './assets/fonts/LedsitexSt.ttf'
 import Header from './components/Header';
 import About from './components/About';
@@ -14,8 +13,10 @@ import Programation from './components/Programation';
 
 
 const Container = styled.div`
-  filter: ${props => props.isBlur && 'blur(3px)'};
-  /* display: ${props => props.isBlur && 'none'}; */
+  height: 100%;
+  filter: ${props => props.isBlur && 'blur(5px)'};
+  overflow: ${props => props.isBlur && 'hidden'};
+
 
 `
 
