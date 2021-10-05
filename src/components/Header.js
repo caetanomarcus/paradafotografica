@@ -69,9 +69,8 @@ const LeftText = styled.h3 `
 
 const Menu = styled.ul `
     display: flex;
-    width: 10%;
-    min-width: 500px;
-    justify-content: space-between;
+    width: 40%;
+    justify-content: space-evenly;
     align-items: center;
     list-style: none;
 
@@ -82,13 +81,14 @@ const Menu = styled.ul `
 `;
 
 const MenuItems = styled.li `
-    font-weight: 600;
+    width: 2rem;
+    font-weight: 400;
     font-size: 1rem;
     cursor: pointer;
     font-style: italic;
 
     :hover{
-        font-weight: 600;
+        font-weight: 700;
     }
 `;
 
