@@ -192,9 +192,6 @@ const ArtistModal = ({openModal,
     setBlur, 
     displayedIndex, 
     setDisplayedIndex}) => {
-
-        console.log('marcus')
-
     const [artist, setArtist] = useState(openArtist);
 
     useEffect(() => {
@@ -202,7 +199,6 @@ const ArtistModal = ({openModal,
     }, [openArtist])
 
     const handleClickBack = () => {
-        console.log(openModal);
         setModal(false);
         setArtist(null)
     }
@@ -224,7 +220,7 @@ const ArtistModal = ({openModal,
             <PhotosContainer>
                 {artist.photographies.map( (item, index )=> {
                     return (
-                        <Photos src={item} onClick={() => openPictures(index)} />
+                        <Photos src={item} onClick={() => openPictures(index)} key={item.id} />
                     )
                 })}
                 <ClickBtn onClick={() => setBlur(true)} > clique para ir às obras </ClickBtn>

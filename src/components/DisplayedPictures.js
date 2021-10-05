@@ -129,7 +129,7 @@ const DisplayedPictures = ({openArtist, setBlur, displayedIndex, setModal}) => {
                 <NextBtn onClick={nextSlide} />
             )}
             >
-                {openArtist?.photographies?.map( item => <Picture bg={item}> </Picture>)}
+                {openArtist?.photographies?.map( (item, index) => <Picture key={index} bg={item}> </Picture>)}
             </CarouselSlide>
             <CloseBtn src={close} onClick={handleClick} />
         </Container>

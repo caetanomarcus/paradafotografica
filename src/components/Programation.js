@@ -142,6 +142,8 @@ const Bio2 = styled.p `
     line-height: 1.7rem;
 `;
 
+const Contender = styled.div ``;
+
 const Programation = () => {
 
     const [isClicked, setClicked] = useState();
@@ -161,7 +163,7 @@ const Programation = () => {
             <Title>Programação</Title>
             <ContentBox>
                 {programation.map(item => (
-                    <Fragment>
+                    <Contender key={item.title} >
                         <Content>
                             <DateBox>
                                 <Date>{item.date}</Date>
@@ -193,7 +195,7 @@ const Programation = () => {
                             )}
                             
                         </HidenContent>
-                    </Fragment>
+                    </Contender>
                 ))}
             </ContentBox>
         </Container>
