@@ -45,6 +45,19 @@ const programation = [
             authorBio: ``
         }
     },
+    {   
+        id: 10,
+        type: 'worksho´p',
+        date: '08/10',
+        day: 'sexta',
+        title: 'Linguagem e Presença',
+        members: 'com Indianarae Siqueira',
+        video: <VideoContainer><Iframe width="853" height="480" src="https://www.youtube.com/embed/97IPGjjuzrI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></Iframe></VideoContainer>,
+        texts: {
+            content: `Encontro com Indianarae Siqueira, sobre gênero neutro e todas as questões que envolvem a linguagem e a presença do cotidiano das pessoas LGBTQIA+. Nesse encontro, além de uma conversa descontraída, questões políticas se misturam com uma rotina pandêmica.`,
+            authorBio: `Indianarae Siqueira, mulher transvestigenere, importante liderança do movimento transfeminista no Brasil, que tem como pauta os direitos trabalhistas das profissionais do sexo, o debate sobre políticas públicas para  prevenção e tratamento para HIV/Aids, hepatites virais, ISTs (Infecções sexualmente transmissíveis) e HPV no Brasil, além de ser a idealizadora da CasaNem, casa de acolhimento para pessoas LGBTQIA+ para inclusão de pessoas trans na sociedade.`
+        }
+    },
     {
         id: 2,
         type: 'workshop',

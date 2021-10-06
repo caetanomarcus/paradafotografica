@@ -172,7 +172,7 @@ const Artists2 = ({openModal,
             <Title>Artistas</Title>
             <CardBox>
                {artists.map(item => (
-                    <Card offset={150} onClick={ () => handleClick(item)} >
+                    <Card offset={150} onClick={ () => handleClick(item)} key={item.id} >
                         <CardTitle>{item.nome}</CardTitle>
                         <CardAvatarContainer>
 													<CardAvatar src={item.avatar} zoon={ item.id === 3} />

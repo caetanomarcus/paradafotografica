@@ -85,7 +85,7 @@ const Artists = () => {
             <Title>Artistas</Title>
             <CardBox>
                {artists.map(item => (
-                    <BackCard>
+                    <BackCard key={item.id} >
                         <Card>
                         <CardTitle>{item.nome}</CardTitle>
                         <CardAvatar src={item.avatar} />

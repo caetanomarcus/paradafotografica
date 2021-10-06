@@ -10,8 +10,11 @@ import amanda06 from '../assets/images/amanda-baroni/Amanda_Baroni_Elementos_da_
 import amanda07 from '../assets/images/amanda-baroni/Amanda_Baroni_Elementos_da_Minha_Natureza_3.jpg';
 import amanda08 from '../assets/images/amanda-baroni/Amanda_Baroni_Elementos_da_Minha_Natureza_4.jpg';
 import amanda09 from '../assets/images/amanda-baroni/Amanda_Baroni_Elementos_da_Minha_Natureza_5.jpg';
-import amanda10 from '../assets/images/amanda-baroni/Amanda_Baroni_Elementos_da_Minha_Natureza_10.jpg';
+import amanda10 from '../assets/images/amanda-baroni/bboy.jpg';
 import amanda11 from '../assets/images/amanda-baroni/Amanda_Baroni_Elementos_da_Minha_Natureza_11.jpg';
+import amanda12 from '../assets/images/amanda-baroni/Amanda_Baroni___Elementos_da_Minha_Natureza__12.jpg';
+
+
 
 const amandaData = {
     avatar,
@@ -26,6 +29,7 @@ const amandaData = {
     amanda09,
     amanda10,
     amanda11,
+    amanda12,
     audio
 }
 

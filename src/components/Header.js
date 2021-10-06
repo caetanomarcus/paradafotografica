@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 import { Link} from 'react-scroll'
 
@@ -44,7 +44,7 @@ const TopBox = styled.div `
     align-items: center;
     position: fixed;
     top:0;
-    background: rgba(255,255,255, .5);
+    background: ${props => props.navBar? '#fff': 'rgba(255,255,255, .5)'};
     z-index: 10;
 
     @media (max-width: 768px) {
@@ -69,9 +69,8 @@ const LeftText = styled.h3 `
 
 const Menu = styled.ul `
     display: flex;
-    width: 10%;
-    min-width: 500px;
-    justify-content: space-between;
+    width: 40%;
+    justify-content: space-evenly;
     align-items: center;
     list-style: none;
 
@@ -82,13 +81,14 @@ const Menu = styled.ul `
 `;
 
 const MenuItems = styled.li `
-    font-weight: 600;
+    width: 2rem;
+    font-weight: 400;
     font-size: 1rem;
     cursor: pointer;
     font-style: italic;
 
     :hover{
-        font-weight: 600;
+        font-weight: 700;
     }
 `;
 
@@ -134,42 +134,22 @@ const SubTitle = styled.h2 `
     }
 `
 
-const BottomBox = styled.div `
-   /* position: relative; */
-   display: none;
-   width: 100%;
-   
-   @media (max-width: 768px) {
-       display: block;
-   }
-`;
-
-const ArrowOne = styled.img `
-    width: 33px;
-    position: absolute;
-    bottom: 0;
-    left: 45%;
-    transform: rotate(90deg) translateX(-50%);
-    
-`
-
-const ArrowTwo = styled.img `
-    transform: rotate(90deg);
-    display: none;
-`
-
 const Header = ({setModal}) => {
-   const handleOnSetActive = () => {
-        console.log('oi')
+   const [navBar, setNavBar] = useState(false);
+
+   const changeBackground = () => {
+       if(window.scrollY > 700){
+        setNavBar(true)
+       } else {
+           setNavBar(false)
+       }
    }
 
-   const handleOnSetInactive = () => {
-    setModal(false)
-   }
+   window.addEventListener('scroll', changeBackground)
     
     return (
         <Container>
-            <TopBox>
+            <TopBox navBar={navBar} >
                 <LeftText>O Departamento Cultural da Pró-Reitoria de Extensão e Cultura da Universidade do Estado do Rio de Janeiro apresenta o festival</LeftText>
                 <Menu>
                     <MenuItems>
@@ -179,7 +159,6 @@ const Header = ({setModal}) => {
                     spy={true} 
                     smooth={true} 
                     offset={50} 
-                    onSetActive={handleOnSetActive}
                     isDynamic ={true}
                     duration={500}>
                     sobre
@@ -193,8 +172,6 @@ const Header = ({setModal}) => {
                     spy={true} 
                     smooth={true} 
                     offset={50} 
-                    onSetActive={handleOnSetActive}
-                    // onSetInactive={handleOnSetInactive}
                     isDynamic ={true}
                     duration={500}>
                     artistas
@@ -207,8 +184,6 @@ const Header = ({setModal}) => {
                     spy={true} 
                     smooth={true} 
                     offset={50} 
-                    onSetActive={handleOnSetActive}
-                    // onSetInactive={handleOnSetInactive}
                     isDynamic ={true}
                     duration={500}>
                     programação

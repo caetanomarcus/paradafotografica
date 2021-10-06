@@ -1,13 +1,17 @@
 import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
+import ReactAudioPlayer from 'react-audio-player';
+
 
 
 import back from '../assets/images/back.png'
+import ig from '../assets/images/instagram.png'
 
 
 
 const Container = styled.div `
     font-family: 'Public Sans', sans-serif;
+    position: relative;
     
     @media (max-width: 480px) {
       background: #fff;
@@ -51,9 +55,12 @@ const PhotosContainer = styled.div `
     align-items: center;
     flex-wrap: wrap;
     margin-top: 1rem;
+    position: relative;
 
     ::after {
         content: '';
+        position: absolute;
+        bottom: -10%;;
         width: 80%;
         height: 5px;
         border-top: 2px solid #363530;
@@ -93,15 +100,29 @@ const InfoArtistBox = styled.div `
 
 const ArtistNameBox = styled.div `
     transform: rotate(-90deg);
+    display: flex;
+    align-items: center;
 
-    @media (max-width: 768px) {
-        display: none;
+    @media (max-width: 480px) {
+        position: absolute;
+        top: 10%;
+        left: 2%;
     }
     
 `;
+const InstagramBox = styled.a `
+
+`
+const Instagram = styled.img `
+    width: 30px;
+`
 
 const ArtistName = styled.h3 `
     font-family: 'Led Bus';
+
+    @media (max-width: 480px) {
+        display: none;
+    }
    
 `;
 
@@ -118,6 +139,7 @@ const DescriptionBox = styled.div `
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     margin: 0 5rem;
     margin-left: 3rem;
     padding-right: 4rem;
@@ -142,6 +164,8 @@ const Description = styled.p `
 
     @media (max-width: 480px) {
         font-size: 1rem;
+        text-shadow: 1px 1px 1px #f2e983;
+        text-align: left;
     }
 `;
 
@@ -181,7 +205,35 @@ const ClickBtn = styled.button `
     @media (max-width: 480px) {
         display: block;
     }
+`;
+
+const NameAndPhotoBox = styled.div `
+    margin: 5px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `
+const ArtNameBox = styled.div `
+    width: 80%;
+`;
+
+const ArtName = styled.p `
+    font-size: .6rem;
+    font-weight: 400;
+    text-shadow: 1px 1px 1px #f2e983;
+    margin: 1rem 0;
+    text-align: center;
+ 
+
+    @media (max-width: 480px) {
+        display: none;
+    }
+`
+
+const Audio = styled(ReactAudioPlayer) `
+   margin: 2rem 0;
+`;
 
 
 
@@ -192,9 +244,6 @@ const ArtistModal = ({openModal,
     setBlur, 
     displayedIndex, 
     setDisplayedIndex}) => {
-
-        console.log('marcus')
-
     const [artist, setArtist] = useState(openArtist);
 
     useEffect(() => {
@@ -202,7 +251,6 @@ const ArtistModal = ({openModal,
     }, [openArtist])
 
     const handleClickBack = () => {
-        console.log(openModal);
         setModal(false);
         setArtist(null)
     }
@@ -224,7 +272,12 @@ const ArtistModal = ({openModal,
             <PhotosContainer>
                 {artist.photographies.map( (item, index )=> {
                     return (
-                        <Photos src={item} onClick={() => openPictures(index)} />
+                       <NameAndPhotoBox key={item.id} >
+                        <Photos src={item.photo} onClick={() => openPictures(index)}  />
+                        <ArtNameBox>
+                            <ArtName>{item.name}</ArtName>
+                        </ArtNameBox>
+                       </NameAndPhotoBox>
                     )
                 })}
                 <ClickBtn onClick={() => setBlur(true)} > clique para ir às obras </ClickBtn>
@@ -232,9 +285,17 @@ const ArtistModal = ({openModal,
             <InfoArtistBox>
                 <ArtistNameBox>
                     <ArtistName>{artist.nome}</ArtistName>
+                    <InstagramBox href={'https://www.instagram.com/' + artist.socialMedia} target='_blank' >
+                        <Instagram src={ig} alt='instagram' />
+                    </InstagramBox>
                 </ArtistNameBox>
                 <DescriptionBox>
                     <Description>{artist.presentation}</Description>
+                    <Audio
+                        src={artist.audioPresentation}
+                        controls
+                    />
+                   
                 </DescriptionBox>
                 <AvatarBox>
                     <Avatar src={artist.avatar} />

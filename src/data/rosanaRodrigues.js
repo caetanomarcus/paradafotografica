@@ -22,7 +22,12 @@ import rosana17 from '../assets/images/rosana-rodrigues/Marcha-Basta-de-violenci
 import rosana18 from '../assets/images/rosana-rodrigues/Mulheres-Unidas-contra-Bolsonaro-1.jpg';
 import rosana19 from '../assets/images/rosana-rodrigues/Mulheres-Unidas-contra-Bolsonaro-2.jpg';
 import rosana20 from '../assets/images/rosana-rodrigues/nao-vai-ter-golpe.jpg';
-import rosana21 from '../assets/images/rosana-rodrigues/Protesto-dos-professores.jpg'
+import rosana21 from '../assets/images/rosana-rodrigues/Protesto-dos-professores.jpg';
+import rosana22 from '../assets/images/rosana-rodrigues/Bloco_Lemy_Ayò-Bloco_Afro_FEBARJ.jpg';
+import rosana23 from '../assets/images/rosana-rodrigues/Amarécomplexo.jpg'
+
+
+
 
 const rosanaData = {
     avatar,
@@ -47,7 +52,9 @@ const rosanaData = {
     rosana18,
     rosana19,
     rosana20,
-    rosana21
+    rosana21,
+    rosana22,
+    rosana23
 }
 
 export default rosanaData

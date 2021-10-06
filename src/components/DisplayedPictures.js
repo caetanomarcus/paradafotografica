@@ -11,13 +11,16 @@ const Container = styled.div `
     background: transparent;
     position: fixed;
     top: 0;
-    margin: 0 auto;
     padding: 5px;
     display: flex;
     justify-content: center;
     z-index: 30;
     overflow: auto;
 
+    @media (max-width: 480px){
+        
+        align-items: center;
+    }
     
 `;
 
@@ -29,20 +32,37 @@ const Picture = styled.div `
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
+
+  @media (max-width: 480px){
+      height: 70vh
+  }
 `;
 
-const CloseBtn = styled.img  `
+const CloseBox = styled.div `
     position: absolute;
     top: 10%;
     right: 1rem;
-    width: 40px;
+    /* background: rgba(255,255,255, .5); */
     border-radius: 50%;
-    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @media (max-width: 480px){
         right: 9%;
         top: 5%;
     }
+`
+
+const CloseBtn = styled.img  `
+    /* position: absolute;
+    top: 10%;
+    right: 1rem; */
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    
 `;
 
 const NextBtn = styled.button`
@@ -87,6 +107,22 @@ const CarouselSlide = styled(Carousel) `
 .paging-dot {
 		display: none;
 	}
+`;
+
+const NameAndPhotoBox = styled.div `
+    margin: 5px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`
+
+const ArtName = styled.p `
+    font-size: .6rem;
+    font-weight: 400;
+    text-align: center;
+    text-shadow: 1px 1px 1px #f2e983;
+
 `
 
 const DisplayedPictures = ({openArtist, setBlur, displayedIndex, setModal}) => {
@@ -129,9 +165,16 @@ const DisplayedPictures = ({openArtist, setBlur, displayedIndex, setModal}) => {
                 <NextBtn onClick={nextSlide} />
             )}
             >
-                {openArtist?.photographies?.map( item => <Picture bg={item}> </Picture>)}
+                {openArtist?.photographies?.map( (item, index) => (
+                <NameAndPhotoBox>
+                    <Picture key={index} bg={item.photo}> </Picture>
+                    <ArtName>{item.name}</ArtName>
+                </NameAndPhotoBox>
+                ))}
             </CarouselSlide>
-            <CloseBtn src={close} onClick={handleClick} />
+            <CloseBox>
+                <CloseBtn src={close} onClick={handleClick} />
+            </CloseBox>
         </Container>
     )
 }
