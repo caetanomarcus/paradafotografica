@@ -206,6 +206,11 @@ const Team = styled.p`
     text-transform: capitalize;
 `;
 
+const Maker = styled(Team)`
+    font-size: .5rem;
+    text-align: right;
+`
+
 const LogoBox = styled.div`
     width: 100%;
     display: flex;
@@ -218,19 +223,6 @@ const LogoBox = styled.div`
 
 const Logo = styled.img`
     width: 80%;
-    
-/* 
-    @media (max-width: 1024px) {
-        width: 19%;
-        margin: 0 .5rem;
-        
-    }
-    
-    @media (max-width: 480px) {
-        width: 19%;
-        margin: 0 .5rem;
-        
-    } */
 `
 
 
@@ -330,8 +322,8 @@ const Footer = () => {
 					<Team>Veronica Folla</Team>
 				</TeamBox>
 
-
 			</MiddleBox>
+            <Maker>© Desenvolvido por Marcus Vinicius Caetano de Freitas</Maker>
 			<BottomBox>
 				<LogoBox>
 					<Logo src={barraDeLogo} alt='logo coexpa' />

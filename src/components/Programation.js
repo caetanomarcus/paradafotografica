@@ -59,7 +59,7 @@ const HidenContent = styled.div `
 `
 
 const DateBox = styled.div `
-    width: 65px;
+    width: 70px;
     padding: 5px;
     border-right: solid black 1px;
 `;
