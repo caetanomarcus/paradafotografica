@@ -164,6 +164,8 @@ const Description = styled.p `
 
     @media (max-width: 480px) {
         font-size: 1rem;
+        text-shadow: 1px 1px 1px #f2e983;
+        text-align: left;
     }
 `;
 
@@ -207,14 +209,22 @@ const ClickBtn = styled.button `
 
 const NameAndPhotoBox = styled.div `
     margin: 5px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `
+const ArtNameBox = styled.div `
+    width: 80%;
+`;
 
 const ArtName = styled.p `
     font-size: .6rem;
     font-weight: 400;
-    text-align: center;
     text-shadow: 1px 1px 1px #f2e983;
-    width: 80%;
+    margin: 1rem 0;
+    text-align: center;
+ 
 
     @media (max-width: 480px) {
         display: none;
@@ -264,7 +274,9 @@ const ArtistModal = ({openModal,
                     return (
                        <NameAndPhotoBox key={item.id} >
                         <Photos src={item.photo} onClick={() => openPictures(index)}  />
-                        <ArtName>{item.name}</ArtName>
+                        <ArtNameBox>
+                            <ArtName>{item.name}</ArtName>
+                        </ArtNameBox>
                        </NameAndPhotoBox>
                     )
                 })}

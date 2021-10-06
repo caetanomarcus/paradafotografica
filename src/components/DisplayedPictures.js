@@ -32,6 +32,10 @@ const Picture = styled.div `
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
+
+  @media (max-width: 480px){
+      height: 70vh
+  }
 `;
 
 const CloseBox = styled.div `
@@ -107,6 +111,10 @@ const CarouselSlide = styled(Carousel) `
 
 const NameAndPhotoBox = styled.div `
     margin: 5px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `
 
 const ArtName = styled.p `
@@ -114,6 +122,7 @@ const ArtName = styled.p `
     font-weight: 400;
     text-align: center;
     text-shadow: 1px 1px 1px #f2e983;
+
 `
 
 const DisplayedPictures = ({openArtist, setBlur, displayedIndex, setModal}) => {
