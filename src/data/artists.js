@@ -252,7 +252,7 @@ const artists = [
     {
         id: 5,
         nome: 'Kamila Camillo',
-        socialMedia: 'kamilacamillo',
+        socialMedia: 'photokamilaa',
         avatar: kamilaData.avatar,
         presentation: `Kamila Camillo é moradora da Maré e começou a fotografar eventos na Igreja a partir dos 14 anos, quando registrava eventos católicos. Desde então, muitos processos atravessam sua trajetória, mas nunca parou de fotografar. Formada em Psicologia, frequentou também a Escola Popular de Comunicação Crítica – ESPOCC/Observatório de Favelas, a escola de Cinema Olhares da Maré / Redes da Maré e participou de projetos do coletivo de fotografia 'Imagens do Povo'. Sempre gostou de fotografar a Maré. Em 2018, fez uma série de fotografias de casais LGBTQIA+, e em homenagem ao mês das crianças fez também a série 'Crias do Tijolinho'. Participa do projeto Mulheres Gordas de Favelas, que nasce a partir de um olhar crítico perante estereótipos e estigmas sociais. O objetivo principal desse projeto é o empoderamento e a autoestima de corpos femininos gordos e favelados através do registro dos seus cotidianos através da fotografia. Em 2020, participou das coletivas 'Elã'' e 'Das Candongas'. Em 2021, participou da 'Corpo Morada', exposição idealizada pelo Observatório de Favelas - Maré.`,
         audioPresentation: kamilaData.audio,

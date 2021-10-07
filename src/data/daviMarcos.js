@@ -1,5 +1,5 @@
 import avatar from '../assets/images/davi-marcos/davi-marcos.jpg';
-import audio from '../assets/sounds/bira-carvalho.ogg';
+import audio from '../assets/sounds/davi-marcos.mp3';
 
 import davi01 from '../assets/images/davi-marcos/DaviMarcos_01.jpg';
 import davi02 from '../assets/images/davi-marcos/DaviMarcos_02.jpg';
