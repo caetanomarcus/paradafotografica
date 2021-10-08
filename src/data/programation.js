@@ -41,8 +41,8 @@ const programation = [
         members: 'com Francisco Valdean',
         video: <VideoContainer><Iframe width="853" height="480" src="https://www.youtube.com/embed/_UrjrWl0o-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></Iframe></VideoContainer>,
         texts: {
-            content: ``,
-            authorBio: ``
+            content: `O Museu da Imagem Itinerante da Maré (MIIM) é um museu de artista, funciona em uma caixa de papelão de 37cm de comprimento por 26cm de largura com 15cm de altura. O projeto foi criado em 2019 pelo fotógrafo Francisco Valdean. No museu-caixa, o artista organiza a curadoria de um arquivo Histórico-Poético das Imagens da Maré, o maior bairro popular da cidade do Rio de Janeiro. O micro museu ganha vida através de ações artísticas, culturais e educativas. O trabalho é uma mistura da pesquisa de doutorado do autor com as vivências de morador da Maré.`,
+            authorBio: `Um cearense acolhido pela Favela da Maré após fazer a travessia de migração do  Nordeste até o Rio de Janeiro. Fotógrafo, documentarista e pesquisador, desenvolve projetos autorais e reflexões sobre as imagens das paisagens cotidianas das favelas e do subúrbio da cidade. Participou da primeira turma da Escola de Fotógrafos Populares, um projeto do Observatório de Favelas desenvolvido na região da Maré desde o ano de 2004. Graduado em Ciências Sociais pela Uerj, Mestre em Antropologia Visual pela mesma universidade e atualmente doutorando pelo PPGARTES-UERJ. Coordenador do projeto Imagens do Povo, onde também atuou como fotógrafo, desenvolvendo projetos e coberturas fotográficas. Ganhador do prêmio “Territórios de Cultura” da Secretaria de Cultura da cidade do Rio de Janeiro em 2015, vem desde 2007 participando de exposições coletivas nos mais variados centros culturais da cidade do Rio de Janeiro, inclusive, com participações  fora do Brasil.`
         }
     },
     {   
@@ -222,8 +222,10 @@ const programation = [
         members: 'com Anderson Felix',
         video: '',
         texts: {
-            content: ``,
-            authorBio: ``
+            content: `O Sarau Fotográfico é um encontro que acontece entre pessoas que amam fotografia e que queiram mostrar seus trabalhos discutindo as várias vertentes da imagem técnica. O primeiro Sarau aconteceu em maio de 2015 e se desenvolveu através dos encontros de forma espontânea e colaborativa. O Sarau é lindo porque ele acontece através da opinião de todos, tentando não ter algo pré-determinado, prezando pelo espaço de troca que simplesmente rola através da curiosidade e conhecimento de pessoas que se reúnem para discutir fotografia.” A ação busca criar um espaço educativo, usando uma metodologia de aulas de fotografia, juntando com uma ideia dos foto-clubes brasileiros para debater e melhorar a produção fotográfica contemporânea. As pessoas são convidadas a expor e ao mesmo tempo participarem dos debates, através da apresentação de fotografias que geram perguntas pelos outros participantes. A cada evento temos entre 6 à 9 pessoas, apresentando trabalhos para um público de 30 à 50. Após a fala e apresentação dos artistas abrimos a roda de perguntas, que é sempre o momento principal do evento, por os debates serem fervorosos, principalmente quando aparece alguma polêmica ou que a intenção do fotógrafo não seja condizente com as imagens apresentadas. Apesar de grandes discussões políticas, éticas, estéticas, históricas ou técnicas, o espaço conserva sempre um tom acolhedor aos participantes. Fomentamos o pensamento sobre a fotografia na sua prática atual como o uso, a história e os desdobramentos na contemporaneidade, através da dinâmica de expor, observar e debater.`,
+            authorBio: `Anderson Felix, vive e trabalha no Rio de Janeiro desde os anos 2000. 
+            Nasceu no interior do Pará, em Santa Izabel do Pará nos anos 80. É professor da rede pública em Duque de Caxias e  estudante de Artes Visuais na UERJ. Como artista desenvolve pesquisa em identidades e memórias amazônidas em diversas linguagens, principalmente em vídeo e fotografia.
+            `
         }
     },
     {
