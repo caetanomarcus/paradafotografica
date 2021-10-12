@@ -65,7 +65,7 @@ const programation = [
         day: 'segunda',
         title: 'Fotografia de Celular',
         members: 'com Flávia Viana',
-        video: '',
+        video: <VideoContainer><Iframe width="853" height="480" src="https://www.youtube.com/embed/VWtCx5ChYUI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></Iframe></VideoContainer>,
         texts: {
             content: `A fotografia está presente em nossas vidas cotidianamente, principalmente pelo fácil
             acesso as câmeras de celular. Hoje, saber fotografar já não significa apenas saber mexer
