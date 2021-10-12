@@ -95,7 +95,7 @@ const programation = [
         day: 'terça',
         title: 'Fotoresistentes: Foto ativistas, passeatas, fotógrafos em movimento',
         members: 'com Carlos Contente',
-        video: '',
+        video: <VideoContainer><Iframe width="853" height="480" src="https://www.youtube.com/embed/P7fhMxwpr2A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></Iframe></VideoContainer>,
         texts: {
             content: `A aula “Olhares militantes” foi pensada por Carlos Contente em um sentido de criar um
             percurso estético afetivo pela obra fotográfica de um coletivo, um jovem fotógrafo e
