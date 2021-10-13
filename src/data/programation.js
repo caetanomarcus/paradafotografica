@@ -132,7 +132,7 @@ const programation = [
         day: 'quarta',
         title: 'Rio Jovem 24h',
         members: 'com Aldene Rocha',
-        video: '',
+        video: <VideoContainer><Iframe width="853" height="480" src="https://www.youtube.com/embed/vKFbUfGDu1A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></Iframe></VideoContainer>,
         texts: {
             content: `Com um projeto de extensão que existe desde 2009, sempre apresentando uma seleção
             de fotografias, já exibidas em quatro exposições na Escola de Artes Visuais do Parque
