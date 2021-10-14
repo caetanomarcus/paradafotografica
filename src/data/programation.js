@@ -156,7 +156,7 @@ const programation = [
         day: 'quinta',
         title: 'Percurso guiado pelo Festival Fotografia de Autoria',
         members: 'com Carolina Spork e Marina S. Alves',
-        video: '',
+        video: <VideoContainer><Iframe width="853" height="480" src="https://www.youtube.com/embed/p2mCFQcymr8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></Iframe></VideoContainer>,
         texts: {
             content: `Criado no contexto da pandemia, o Festival Fotografia de Autoria se propõe a construir
             um espaço de exposição e troca de produções autorais e de autorias em fotografia,
