@@ -180,7 +180,7 @@ const programation = [
         day: 'sexta',
         title: 'Introdução ao Canva: montagem de portfólios e postagens',
         members: 'com Hevelin Costa',
-        video: '',
+        video: <VideoContainer><Iframe width="853" height="480" src="https://www.youtube.com/embed/3Dqf7Ltd3UM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></Iframe></VideoContainer>,
         texts: {
             content: `Montar um portfólio para divulgação do trabalho artístico é essencial para a inserção no
             sistema de arte, tanto junto às instituições quanto para uma carreira autônoma e
