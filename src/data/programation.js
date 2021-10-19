@@ -207,7 +207,7 @@ const programation = [
         day: 'terça',
         title: 'Conversa com Artistas',
         members: 'com Amanda Baroni, Bira Carvalho, Jones, Davi Marcos, Douglas Lopes, Rosana Rodrigues, Vishkaay, Kamila Camillo, Andréa Almeida e Patrícia Chiavazzoli',
-        video: '',
+        video: <VideoContainer><Iframe width="853" height="480" src="https://www.youtube.com/embed/PDMwS9MVkkw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></Iframe></VideoContainer>,
         texts: {
             content: ``,
             authorBio: ``
