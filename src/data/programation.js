@@ -235,9 +235,9 @@ const programation = [
         day: 'quinta',
         title: 'Fechamento',
         members: '',
-        video: '',
+        video: <VideoContainer><Iframe width="853" height="480" src="https://www.youtube.com/embed/TGeH3Ci4isM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></Iframe></VideoContainer>,
         texts: {
-            content: ``,
+            content: `A live de fechamento do Festival Parada Fotográfica conta com a presença do diretor do Departamento Cultural da Uerj, prof. Adair Rocha, o fotógrafo João Roberto Ripper e a artista e fotógrafa Anna Lemos, com mediação de umas das curadoras do festival, Patricia Chiavazzoli. Conversaremos sobre a relação entre arte e educação e a importância da fotografia como ferramenta de desconstrução de discursos hegemônicos sobre comunidades ditas periféricas de nossa sociedade, a partir da possibilidade de cada um poder narrar suas histórias através das imagens. A live aponta para os caminhos futuros do nosso festival, com a próxima parada já definida: Zona Oeste!`,
             authorBio: ``
         }
     },

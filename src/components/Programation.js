@@ -182,7 +182,8 @@ const Programation = () => {
                                         <ResumeTitle>Resumo:</ResumeTitle>
                                         <TextContent>{item.texts.content}</TextContent>
                                     </Resume>
-                                    <BioBox>
+                                   {item.texts.authorBio && (
+                                        <BioBox>
                                         <BioTitle>Biografia:</BioTitle>
                                         <BioBoxContender>
                                             <Bio>{item.id === 5 && (<b> Carolina Spork: </b>)}{item.texts.authorBio}</Bio>
@@ -191,6 +192,7 @@ const Programation = () => {
                                             )}
                                         </BioBoxContender>
                                     </BioBox>
+                                   )}
                                 </Fragment>
                             )}
                             
