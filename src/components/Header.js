@@ -37,7 +37,7 @@ const Container = styled.header `
 
 const TopBox = styled.div `
     width: 100%;
-    height: 90px;
+    height: 70px;
     padding: 32px;
     display: flex;
     justify-content: space-between;
